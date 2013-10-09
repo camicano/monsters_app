@@ -14,7 +14,7 @@ class MonstersController < ApplicationController
 	def create
 		@monster = Monster.create(params[:monster])
 
-		redirect_to root_path
+		redirect_to monster_path @monster
 	end
 
 	def update
