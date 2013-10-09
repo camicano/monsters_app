@@ -18,9 +18,14 @@ class MonstersController < ApplicationController
 	end
 
 	def update
+		@monster = Monster.update(params[:id])
+		redirect '/'
 	end
 
 	def edit
+		@monster = Monster.find(params[:id])
+		
+		redirect '/'
 	end
 
 	def destroy
